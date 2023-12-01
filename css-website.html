@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>figma website layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            padding: 10px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        header nav select {
+            padding: 0px 5px;
+            background-color: transparent;
+            border: none;
+        }
+
+        header .btn {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+        }
+
+        header .btn .log {
+            text-decoration: none;
+            color: black;
+        }
+
+        header .btn .free {
+            background-color: #ECE5FF;
+            color: #794CFF;
+            padding: 10px 35px;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .save {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            margin: 8% auto 0;
+            background-color: #F2F9EB;
+            border-radius: 20px;
+        }
+
+        .save .s90 {
+            background-color: #81C43B;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        .save .getacc {
+            padding: 10px 20px;
+        }
+
+        .manage {
+            margin: 2% auto 0;
+            width: fit-content;
+            font-size: 40px;
+            line-height: 50px;
+            text-align: center;
+            color: #35414B;
+        }
+
+        .con {
+            width: 35%;
+            margin: 1% auto 0;
+            text-align: center;
+        }
+
+        .try {
+            width: fit-content;
+            display: flex;
+            margin: 5% auto 0;
+            align-items: center;
+            border: 1px solid black;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .try input {
+            border: none;
+            padding: 10px 0px;
+        }
+
+        .try .tr {
+            background-color: #794CFF;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 10px 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        #hed {
+            background-color: #F0EBFA;
+            padding: 2% 0% 8% 0%;
+        }
+
+        /* graph start  */
+        .graph {
+            width: 80%;
+            margin: -10% auto 0;
+        }
+
+        .graph img {
+            width: 100%;
+            height: inherit;
+        }
+
+        /* graph end  */
+        .trust {
+            margin-top: 5%;
+            text-align: center;
+        }
+
+        /* trust end  */
+        .company {
+            margin-top: 2%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        /* .company end  */
+
+        .survey {
+            padding: 5% 0%;
+            margin-top: 5%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* background-color: #F0EBFA; */
+        }
+
+        .survey .sur-left {
+            width: 50%;
+        }
+
+        .survey .sur-left img {
+            width: 100%;
+        }
+
+        .survey .sur-right {
+            width: fit-content;
+            /* text-align: right; */
+        }
+
+        .survey .sur-right .sur-bx {
+            width: 100%;
+            padding: 20px 30px;
+            text-align: left;
+            margin: 2% 0%;
+        }
+
+        .survey .sur-right .sur-bx h2 {
+            padding: 5px 0px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .survey .sur-right .sbx1 {
+            border-left: 8px solid #794CFF;
+            border-top: none;
+            border-bottom: none;
+            background-color: #F6F3FC;
+        }
+
+        .survey .sur-right .sbx3 {
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+        }
+
+        #surv {
+            background-color: #F0EBFA;
+        }
+
+        .work-h2 {
+            padding: 5% 0% 5% 0%;
+            text-align: center;
+        }
+
+        .work {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .work .work-bx {
+            width: 33%;
+            margin: 2% 0%;
+        }
+
+        .work .work-bx h3 {
+            font-size: 20px;
+            padding: 5px 0px;
+        }
+
+        .work .work-bx p {
+            font-size: 18px;
+        }
+
+        /* work end  */
+        #wee {
+            padding: 5% 0%;
+            background-color: #F0EBFA;
+        }
+
+        .we {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .we .we-left h2 {
+            font-size: 35px;
+        }
+
+        .we .we-left p {
+            font-size: 20px;
+            margin: 15px 0px 25px 0px;
+        }
+
+        .we .we-left a {
+            text-decoration: none;
+            background-color: #794CFF;
+            color: #ECE5FF;
+            padding: 12px 20px;
+            border-radius: 4px;
+        }
+
+        .we .we-right img {
+            width: 100%;
+            height: inherit;
+        }
+
+        /* we end  */
+
+        .customer {
+            text-align: center;
+            padding: 3% 0%;
+        }
+
+        /* .customer h2{
+            margin: 5% 0% 0% 0% ;
+        } */
+        .customer p {
+            margin: 2% 0%;
+        }
+
+        .cust-box {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .cust-box .cu-data {
+            margin: 5px 0px;
+            padding: 0px 10px;
+        }
+
+        #cus {
+            padding: 3% 0% 5% 0%;
+        }
+
+        .cu-bx {
+            display: flex;
+            padding: 15px 0px;
+        }
+
+        .cubx1 {
+            border-top: 3px solid black;
+        }
+
+        /* .customer end  */
+
+        .employee {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2% 0%;
+            background-color: #794CFF;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .employee .emp-left {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            padding-left: 4%;
+        }
+
+        .employee .emp-left h2 {
+            font-size: 35px;
+        }
+
+        .employee .emp-right {
+            width: 40%;
+            padding: 20px;
+        }
+
+        .employee .emp-right img {
+            padding: 0px 10px;
+        }
+
+        #emp {
+            padding: 0% 0% 5% 0%;
+        }
+
+        /* emp end  */
+        #foot{
+            padding: 3% 0%;
+            background-color: #1D2830;
+        }
+        footer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        footer .menus{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            text-align: left;
+        }
+        footer .menus a{
+            text-decoration: none;
+            color: white;
+            padding: 10px 0px;
+        }
+        footer .footer-up{
+            display: flex;
+            justify-content: space-between;
+        }
+        .appimg{
+            padding: 20px 0px;
+        }
+        .footer-bottom{
+            display: flex;
+            justify-content: space-between;
+            border-top: 2px solid lightgray;
+            color: white;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header start  -->
+    <section id="hed">
+        <div class="container">
+            <header>
+                <div class="logo">team.flow</div>
+                <nav>
+                    <select>
+                        <option>How it Works</option>
+                    </select>
+                    <select>
+                        <option>Product</option>
+                    </select>
+                    <select>
+                        <option>Pricing</option>
+                    </select>
+                    <select>
+                        <option>Resources</option>
+                    </select>
+                </nav>
+                <div class="btn">
+                    <a href="" class="log">login</a>
+                    <a href="" class="free">get started free</a>
+                </div>
+            </header>
+            <!-- header end  -->
+
+            <!-- save start -->
+            <div class="save">
+                <div class="s90">Save 90%</div>
+                <div class="getacc">Get account of $59 > </div>
+            </div>
+            <!-- save end  -->
+
+            <!-- manage start  -->
+            <h1 class="manage">
+                Manage the team <br> everyone wants to be on
+            </h1>
+            <!-- manage end  -->
+
+            <!-- .con start  -->
+            <div class="con">
+                Simple platform that lets you master what great managers do best,
+                as develop trust, collaborate, and drive team performance.
+            </div>
+            <!-- .con end -->
+
+            <!-- try start  -->
+            <div class="try">
+                <input type="text" size="30">
+                <a href="" class="tr">Try it free</a>
+            </div>
+            <!-- try end  -->
+        </div>
+    </section>
+    <!-- graph start  -->
+    <div class="container">
+        <div class="graph">
+            <img src="Graph.png" alt="graph">
+        </div>
+
+        <h2 class="trust">TRUSTED BY OVER 10.000+ WORLD’S BEST TEAMS</h2>
+
+        <div class="company">
+            <div class="com-bx">
+                <img src="google-2015a 1.png" alt="">
+            </div>
+            <div class="com-bx">
+                <img src="airbnb 1.png" alt="">
+            </div>
+            <div class="com-bx">
+                <img src="facebook.png" alt="">
+            </div>
+            <div class="com-bx">
+                <img src="hubspot 1.png" alt="">
+            </div>
+            <div class="com-bx">
+                <img src="slack-2 1.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- graph end  -->
+
+    <!-- surv start -->
+    <section id="surv">
+        <div class="container">
+            <div class="survey">
+                <div class="sur-left">
+                    <img src="timeline.png" alt="">
+                </div>
+                <div class="sur-right">
+                    <div class="sur-bx sbx1">
+                        <h2>Survey your team</h2>
+                        <p>Powerful questions that get to the heart <br> of how team members really feel.</p>
+                    </div>
+                    <div class="sur-bx sbx2">
+                        <h2>Resolve issues quickly</h2>
+                        <p>Anonymous messaging that connects <br> managers and employees.</p>
+                    </div>
+                    <div class="sur-bx sbx3">
+                        <h2>Plan your 1-on-1s</h2>
+                        <p>Plan meetings together and give a stake <br> employees and teams.</p>
+                    </div>
+                    <div class="sur-bx sbx4">
+                        <h2>Track your progress</h2>
+                        <p>Easy-to-read reports and sharable <br> results help managers and teams.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- surv end -->
+
+    <div class="container">
+        <h2 class="work-h2">Make your work easier</h2>
+        <div class="work">
+            <div class="work-bx">
+                <img src="Group21.png" alt="">
+                <h3>Team Surveys & Reports</h3>
+                <p>Short, anonymous surveys track your team’s needs weekly so you can focus.</p>
+            </div>
+            <div class="work-bx">
+                <img src="Group19.png" alt="">
+                <h3>Collaborative 1:1</h3>
+                <p>Build relationships by planning 1-on-1s and start meetings.</p>
+            </div>
+            <div class="work-bx">
+                <img src="Group20.png" alt="">
+                <h3>Learning Center</h3>
+                <p>Quickly get solutions tailored to your personal challenges from the manager.</p>
+            </div>
+            <div class="work-bx">
+                <img src="Group22.png" alt="">
+                <h3>Anonymous Messaging</h3>
+                <p>Develop trust in a safe channel for important conversations.</p>
+            </div>
+            <div class="work-bx">
+                <img src="Group23.png" alt="">
+                <h3>Conversation Engine</h3>
+                <p>Communicate confidently with recommended talking points.</p>
+            </div>
+            <div class="work-bx">
+                <img src="Group24.png" alt="">
+                <h3>Exclusives Manager</h3>
+                <p>Access manager tips, activities and best practices from our team of experts.</p>
+            </div>
+        </div>
+    </div>
+    <!-- we start  -->
+    <section id="wee">
+        <div class="container">
+            <div class="we">
+                <div class="we-left">
+                    <h2>We work how you <br> work everyday</h2>
+                    <p>Since the easiest things to use actually get used, we <br> adapts to the way your team works –
+                        not the other way around.</p>
+                    <a href="">Get started free</a>
+                </div>
+                <div class="we-right">
+                    <img src="Group26.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- we end   -->
+
+    <!-- customer start -->
+    <section id="cus">
+        <div class="container">
+            <div class="customer">
+                <h2>Why customers love <br> working with us</h2>
+                <p>“It's amazing what has helped me learn about my team. <br>
+                    I don't worry about blindspots anymore, and 1-on-1s have never <br>
+                    been more productive. The team loves it.”</p>
+            </div>
+
+            <div class="cust-box">
+                <div class="cu-bx cubx1">
+                    <img src="Ellipse5.png" alt="">
+                    <div class="cu-data">
+                        <p>Jorge Robertson</p>
+                        CS at Google
+                    </div>
+                </div>
+                <div class="cu-bx cubx2">
+                    <img src="Ellipse6.png" alt="">
+                    <div class="cu-data">
+                        <p>Francisco Bell</p>
+                        Designer at Microsoft
+                    </div>
+                </div>
+                <div class="cu-bx cubx3">
+                    <img src="Ellipse7.png" alt="">
+                    <div class="cu-data">
+                        <p>Beth Fox</p>
+                        Developer at Airbnb
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- customer end -->
+
+    <section id="emp">
+        <div class="container">
+            <div class="employee">
+                <div class="emp-left">
+                    <h2>84% of employees who use <br> trust their direct manager</h2>
+                </div>
+                <div class="emp-right">
+                    <img src="google-play.png" alt="">
+                    <img src="app-store.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="foot">
+    <div class="container">
+
+    <footer>
+        <!-- <div class="container1"> -->
+            <div class="footer-up">
+                <div class="menus">
+
+                    <h6> Company </h6></span>
+
+                    <a href="" class="a-hide"> About Us </a>
+                    <a href="" class="a-hide"> Blog </a>
+                    <a href="" class="a-hide"> Careers </a>
+                    <a href="" class="a-hide"> Contact Us </a>
+                </div>
+                <div class="menus">
+                    <h6> Support </h6></span>
+                    <a href="" class="a-hide"> Help Center </a>
+                    <a href="" class="a-hide"> Safety Center </a>
+                    <a href="" class="a-hide"> Community</a>
+                </div>
+
+                <div class="menus">
+                    <h6> Legal </h6></span>
+                    <a href="" class="a-hide"> Cookies Policy </a>
+                    <a href="" class="a-hide"> Privacy Policy </a>
+                    <a href="" class="a-hide"> Terms of service </a>
+                </div>
+
+                <div class="menus footer-app">
+                    <h6> Install apps </h6>
+                    <div class="appimg">
+                        <img src="Layer2.png" alt="">
+                    </div>
+                    <div class="appimg">
+                        <img src="Group.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p> &#169; 2020 - All rights reserved </p>
+                </div>
+                <div class="icons">
+                    <i class="fa-brands fa-instagram icn"></i>
+                    <i class="fa fa-earth-americas icn"></i>
+                    <i class="fa-brands fa-twitter icn"></i>
+                    <i class="fa-brands fa-youtube icn"></i>
+                </div>
+            </div>
+
+        <!-- </div> -->
+    </footer>
+
+</div>
+</section>
+</body>
+
+</html>
